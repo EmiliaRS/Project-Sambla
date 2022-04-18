@@ -4,19 +4,533 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sambla - New layout</title>
+    <title>Sambla - Startsida</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Serif&family=Readex+Pro:wght@200;300;400;500;600;700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Scripts -->
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script src="form.js" defer></script>
 </head>
 <body>
 
-<container>
+    <div class="container">
 
-    <div class="header">
+        <!-- Header -->
+        <header class="site-header">
+            <div class="site-header__inner">
+                    
+                <!-- Branding -->
+                <a href="index.html">
+                    <img src="/assets/Ikons/Logotyp.svg" alt="" class="branding">
+                </a>
+
+                <!-- Menu -->
+                <nav class="menu">
+                    <ul class="menu__list">
+                        <li class="menu__item"><a href="index.html" class="menu__link">Home</a></li>
+                        <li class="menu__item"><a href="" class="menu__link">About</a></li>
+                        <li class="menu__item"><a href="subpage.html" class="menu__link">Services</a></li>
+                        <li class="menu__item"><a href="" class="menu__link">Clients</a></li>
+                        <li class="menu__item"><a href="" class="menu__link">Contact</a></li>
+                    </ul>
+                </nav>
+
+            </div>
+        </header>
+
+        <!-- Hero -->
+        <section class="hero">
+                <div class="hero__inner">
+
+                    <div class="hero__content">
+
+                        <div class="hero-background">
+    
+                            <!-- Ikon: Diagram -->        
+                            <img class="hero__sambla" src="assets/Ikons/Ikon Header.svg" alt="">
+
+                            <!-- Hero Title -->
+                            <h2 class="hero__title">Samla lån och krediter</h2>
+
+                            <!-- Hero Text -->
+                            <p class="hero__text">- Låna upp till 600 000 kr</p>
+
+                            <p class="hero-text__ingress">Sedan starten 2014 har vi hjälpt över 390 000 nöjda kunder att låna med låg ränta.</p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+        </section>
+
+        <!-- Form -->
+        <section class="site-form">
+            <div class="site-form__inner">
+                    
+                <div class="site-form__content">
+
+                    <!-- Form Headline -->
+                    <h3 class="site-form__title">Fyll i tre frågor och få ett <br>låneförslag direkt!</br></h3>
+
+                    <!-- Form Arrow -->
+                    <figure class="site-form__arrow">
+                        <img src="assets/Ikons/Höger pil-liten.svg" alt="">
+                    </figure>
+
+                    <!-- Formulär -->
+                    <section class="form-section">
+                  
+                        <div class="form-section__inner">
+
+                                <div class="form-section__content">
+
+                                    <form id="loan-form">
+                                        <div class="level">
+                                            <!-- Loan amount headline-->
+                                            <div class="form-section__amount">
+                                                <div class="level-amount">
+                                                    <p class="level__headline">Hur mycket vill du låna?</p>
+                                                </div>
+                                            </div>
+                  
+                                            <!-- Input field loan amount -->
+                                            <div class="level-amount">
+                                                <div class="level-amount__field">
+                                                    <div class="control">
+                                                        <input class="input" id="amount" type="number" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                  
+                                        <div class="level">
+                                            <!-- Loan interest headline -->
+                                            <div class="form-section__interest">
+                                                <div class="level-interest">
+                                                    <p class="level__headline">Till vilken ränta vill du låna?</p>
+                                                </div>
+                                            </div>
+                  
+                                            <!-- Input field loan interest -->
+                                            <div class="level-interest">
+                                                <div class="level-interest__field">
+                                                    <div class="control">
+                                                        <input class="input" id="interest" type="number" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+     
+                                        <div class="level">
+                                            <!-- Loan years headline -->
+                                            <div class="form-section__years">
+                                                <div class="level-years">
+                                                    <p class="level__headline">Hur länge vill du betala på lånet?</p>
+                                                </div>
+                                            </div>
+                  
+                                            <!-- Input field loan years -->
+                                            <div class="level-years">
+                                                <div class="level-years__field">
+                                                    <div class="control">
+                                                        <input class="input" id="years" type="number" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Form Loan Approval -->
+                                        <p class="form-approval__text">Genom att påbörja en asökan godkänner jag användaravtalet och bekräftas att jag tagit del av dataskyddspolicyn.</p>
+
+                                        <!-- Submit button: Beräkna ditt låneförslag -->
+                                        <div class="form-submit">
+                                            <button class="form-submit__button">
+                                                <h5 class="form-submit__title">Beräkna ditt låneförslag</h5>
+                                            </button>
+                                        </div>
+
+                                        <!-- Form Legal Information -->
+                                        <p class="form-legal__text">Exempel: Räntan är rörlig och sätts individuellt. Annuitetslån 150 000 kr, 12 år, nom. ränta 6,4%, start-/aviavg. 0 kr ger eff. ränta 6,59%. Totalkostnad: 215 282 kr eller 1 495 kr/månad (144 avbet.). Återbet. tid 1-20 år. Eff. ränta 3,01%-29,95%. Uppdaterat 2021-05-18.</p>
+                                        
+                                    </form>
+                                </div>
+            
+                        </div>
         
+                    </section>
+
+                </div>   
+
+            </div>
+        </section>
+
+        <!-- Pros of taking a loan -->
+        <section class="loan-pros">
+            <div class="loan-pros__inner">
+
+                <div class="loan-pros__content">
+
+                    <!-- Loan Pros Headline -->
+                    <h3 class="loan-pros__headline">Välj lånebeloppet du önskar och våra långivare lämnar sina bud till dig.</h3>
+
+                    <!-- Loan Pros List -->
+                    <div class="loan-pros__list">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="32" viewBox="0 0 22.243 40.243">
+                            <g id="Group_13" data-name="Group 13" transform="translate(-1023.879 -1764.879)">
+                            <line id="Line_9" data-name="Line 9" x2="18" y2="18" transform="translate(1026 1767)" fill="none" stroke="#ffb74d" stroke-linecap="round" stroke-width="3"/>
+                            <line id="Line_10" data-name="Line 10" y1="18" x2="18" transform="translate(1026 1785)" fill="none" stroke="#ffb74d" stroke-linecap="round" stroke-width="3"/>
+                            </g>
+                        </svg>
+                        <p class="loan-pros__text">Fler än 40 långivare</p>
+                    </div>
+
+                    <div class="loan-pros__list">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="32" viewBox="0 0 22.243 40.243">
+                            <g id="Group_13" data-name="Group 13" transform="translate(-1023.879 -1764.879)">
+                            <line id="Line_9" data-name="Line 9" x2="18" y2="18" transform="translate(1026 1767)" fill="none" stroke="#ffb74d" stroke-linecap="round" stroke-width="3"/>
+                            <line id="Line_10" data-name="Line 10" y1="18" x2="18" transform="translate(1026 1785)" fill="none" stroke="#ffb74d" stroke-linecap="round" stroke-width="3"/>
+                            </g>
+                        </svg>
+                        <p class="loan-pros__text">Spara pengar med lägre ränta</p>
+                    </div>
+
+                    <div class="loan-pros__list">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="32" viewBox="0 0 22.243 40.243">
+                            <g id="Group_13" data-name="Group 13" transform="translate(-1023.879 -1764.879)">
+                            <line id="Line_9" data-name="Line 9" x2="18" y2="18" transform="translate(1026 1767)" fill="none" stroke="#ffb74d" stroke-linecap="round" stroke-width="3"/>
+                            <line id="Line_10" data-name="Line 10" y1="18" x2="18" transform="translate(1026 1785)" fill="none" stroke="#ffb74d" stroke-linecap="round" stroke-width="3"/>
+                            </g>
+                        </svg>
+                        <p class="loan-pros__text">Endast en kreditupplysning hos UC</p>
+                    </div>
+                
+                    <!-- Reviews -->
+                    <div class="loan-pros__review">
+
+                        <div class="review">
+                            <img src="/assets/Ikons/omdöme-sambla.svg" alt="">
+                        </div>
+
+                        <div class="review__second">
+                            <img src="/assets/Ikons/tryggt-och-säkert-sambla.svg" alt="">
+                        </div>
+                    </div>
+                                
+                </div>
+            </div>
+                    
+        </section>           
+
+        <!-- Beräkna ditt låneförslag -->
+        <section class="result-section" id="result"> 
+            <div class="result__columns" >
+                <h3 class="result__headline">Se ditt låneförslag direkt</h3>
+
+                <div class="result__content">
+                    <div class="column">
+                        <div class="result-notification__primary">
+                            <p class="result__text">Din betalning per månad</p>
+                            <p id="monthlyPayment" class="result__calculation">kr</p>
+                        </div>
+                    </div>
+  
+                    <div class="column">
+                        <div class="result-notification__info">
+                            <p class="result__text">Räntekostnad</p>
+                            <p id="totalInterest" class="result__calculation">%</p>
+                        </div>
+                    </div>
+  
+                    <div class="column">
+                        <div class="result-notification__link">
+                            <p class="result__text">Total lånekostnad</p>
+                            <p id="totalPayment" class="result__calculation">kr</p>
+                        </div>
+                    </div>
+                </div>
+  
+            </div>
+        </section>
+
+        <!-- Partners to Sambla -->
+        <section class="partners">
+            <div class="partners__inner">
+
+                <div class="partners__content">
+
+                    <!-- Partners Headline -->
+                    <div class="partners__info">
+                        <h2 class="partners__headline">Här är ett urval av våra 40 samarbetspartners</h2>
+                        <p class="partners__text">ICA Banken är en stabil och välkänd aktör inom lån och erbjuder både bra ränta och goda lånemöjligheter för livets alla skeden.</p>
+                    </div>
+            
+                    <!-- Partners -->
+                    <div class="partners__image">
+                        
+                            <img class="partners__collaboration" src="assets/Ikons/Ikon ICA Banken.svg" alt="">
+                        
+                        
+                        <!-- Partners Navigation -->
+                        <div class="partners__arrows">
+                            <a href="">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="71" height="61" viewBox="0 0 80.896 70.899">
+                                    <g id="Samarbetspartners:_Vänster_pil" data-name="Samarbetspartners: Vänster pil" transform="translate(-1087.051 -2771.051)">
+                                    <line id="Line_4" data-name="Line 4" x1="29" y2="31" transform="translate(1092 2776)" fill="none" stroke="#ffb74d" stroke-linecap="round" stroke-width="7"/>
+                                    <line id="Line_6" data-name="Line 6" x1="29" y1="30" transform="translate(1092 2807)" fill="none" stroke="#ffb74d" stroke-linecap="round" stroke-width="7"/>
+                                    <line id="Line_7" data-name="Line 7" x1="30" y2="31" transform="translate(1113 2776)" fill="none" stroke="#ffb74d" stroke-linecap="round" stroke-width="7"/>
+                                    <line id="Line_8" data-name="Line 8" x1="30" y1="30" transform="translate(1113 2807)" fill="none" stroke="#ffb74d" stroke-linecap="round" stroke-width="7"/>
+                                    <line id="Line_9" data-name="Line 9" x1="28" y2="31" transform="translate(1135 2776)" fill="none" stroke="#ffb74d" stroke-linecap="round" stroke-width="7"/>
+                                    <line id="Line_10" data-name="Line 10" x1="28" y1="30" transform="translate(1135 2807)" fill="none" stroke="#ffb74d" stroke-linecap="round" stroke-width="7"/>
+                                    </g>
+                                </svg>
+                            </a>
+                            
+                            <a href="">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="71" height="61" viewBox="0 0 80.896 70.899">
+                                    <g id="Samarbetspartners:_Höger_pil" data-name="Samarbetspartners: Höger pil" transform="translate(-1466.053 -2771.051)">
+                                    <line id="Line_4" data-name="Line 4" x2="29" y2="31" transform="translate(1513 2776)" fill="none" stroke="#ffb74d" stroke-linecap="round" stroke-width="7"/>
+                                    <line id="Line_6" data-name="Line 6" y1="30" x2="29" transform="translate(1513 2807)" fill="none" stroke="#ffb74d" stroke-linecap="round" stroke-width="7"/>
+                                    <line id="Line_7" data-name="Line 7" x2="30" y2="31" transform="translate(1491 2776)" fill="none" stroke="#ffb74d" stroke-linecap="round" stroke-width="7"/>
+                                    <line id="Line_8" data-name="Line 8" y1="30" x2="30" transform="translate(1491 2807)" fill="none" stroke="#ffb74d" stroke-linecap="round" stroke-width="7"/>
+                                    <line id="Line_9" data-name="Line 9" x2="28" y2="31" transform="translate(1471 2776)" fill="none" stroke="#ffb74d" stroke-linecap="round" stroke-width="7"/>
+                                    <line id="Line_10" data-name="Line 10" y1="30" x2="28" transform="translate(1471 2807)" fill="none" stroke="#ffb74d" stroke-linecap="round" stroke-width="7"/>
+                                    </g>
+                                </svg> 
+                            </a>
+                            
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Article -->
+        <section class="article">
+            <div class="article__inner">
+
+                <div class="article__content">
+
+                    <!-- Content 1 -->
+                    
+                    <div class="content__one">
+                
+                        <a href="subpage.html">
+                            <img class="content__image" src="assets/images/kvinna-vid-dator.jpg" alt="">
+                        </a>
+                        
+                        <div class="content__information">
+                            <h3 class="content__title">Hur kan vi förändra livet med hjälp av ett lån?</h3>
+                            <p class="content__text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Saepe inventore accusamus consequuntur consequatur architecto ipsum, possimus beatae quasi pariatur exercitationem.</p>
+                        </div>
+                    
+                        <!-- Content link -->
+                        <a href="subpage.html" class="content__link">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="43.647" height="38.098" viewBox="0 0 43.647 38.098">
+                                <g id="Höger_pil-liten" data-name="Höger pil-liten" transform="translate(-1468.88 -2773.879)">
+                                <line id="Line_4" data-name="Line 4" x2="16.095" y2="17.205" transform="translate(1494.31 2776)" fill="none" stroke="#ffb74d" stroke-linecap="round" stroke-width="3"/>
+                                <line id="Line_6" data-name="Line 6" y1="16.65" x2="16.095" transform="translate(1494.31 2793.205)" fill="none" stroke="#ffb74d" stroke-linecap="round" stroke-width="3"/>
+                                <line id="Line_7" data-name="Line 7" x2="16.65" y2="17.205" transform="translate(1482.1 2776)" fill="none" stroke="#ffb74d" stroke-linecap="round" stroke-width="3"/>
+                                <line id="Line_8" data-name="Line 8" y1="16.65" x2="16.65" transform="translate(1482.1 2793.205)" fill="none" stroke="#ffb74d" stroke-linecap="round" stroke-width="3"/>
+                                <line id="Line_9" data-name="Line 9" x2="15.54" y2="17.205" transform="translate(1471 2776)" fill="none" stroke="#ffb74d" stroke-linecap="round" stroke-width="3"/>
+                                <line id="Line_10" data-name="Line 10" y1="16.65" x2="15.54" transform="translate(1471 2793.205)" fill="none" stroke="#ffb74d" stroke-linecap="round" stroke-width="3"/>
+                                </g>
+                            </svg>
+                        </a>    
+                    </div>
+
+                    <!-- Content 2 -->
+                    <div class="content__two">
+                        
+                        <a href="subpage.html">
+                            <img class="content__image" src="assets/images/mamma-dotter.jpg" alt="">
+                        </a>
+
+                        <div class="content__information">
+                            <h3 class="content__title">Med ett bolån blev drömmen om ett eget boende verklighet</h3>
+                            <p class="content__text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Saepe inventore accusamus consequuntur consequatur architecto ipsum, possimus beatae quasi pariatur exercitationem.</p>
+                        </div>
+                    
+                        <!-- Content link -->
+                        <a href="/subpage.html" class="content__link">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="43.647" height="38.098" viewBox="0 0 43.647 38.098">
+                                <g id="Höger_pil-liten" data-name="Höger pil-liten" transform="translate(-1468.88 -2773.879)">
+                                <line id="Line_4" data-name="Line 4" x2="16.095" y2="17.205" transform="translate(1494.31 2776)" fill="none" stroke="#ffb74d" stroke-linecap="round" stroke-width="3"/>
+                                <line id="Line_6" data-name="Line 6" y1="16.65" x2="16.095" transform="translate(1494.31 2793.205)" fill="none" stroke="#ffb74d" stroke-linecap="round" stroke-width="3"/>
+                                <line id="Line_7" data-name="Line 7" x2="16.65" y2="17.205" transform="translate(1482.1 2776)" fill="none" stroke="#ffb74d" stroke-linecap="round" stroke-width="3"/>
+                                <line id="Line_8" data-name="Line 8" y1="16.65" x2="16.65" transform="translate(1482.1 2793.205)" fill="none" stroke="#ffb74d" stroke-linecap="round" stroke-width="3"/>
+                                <line id="Line_9" data-name="Line 9" x2="15.54" y2="17.205" transform="translate(1471 2776)" fill="none" stroke="#ffb74d" stroke-linecap="round" stroke-width="3"/>
+                                <line id="Line_10" data-name="Line 10" y1="16.65" x2="15.54" transform="translate(1471 2793.205)" fill="none" stroke="#ffb74d" stroke-linecap="round" stroke-width="3"/>
+                                </g>
+                            </svg>
+                        </a>    
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Sambla Explains: How To -->
+        <section class="how-to">
+            <div class="how-to__inner">
+               
+                   <div class="how-to__section">
+                        <h3 class="how-to__headline">Så går det till</h3>
+                        <img class="how-to__arrow" src="assets/Ikons/Höger pil.svg" alt="" class="">
+                    </div>  
+                        
+                <div class="how-to__content">    
+
+                    <div class="how-to__box">
+                        <h2 class="how-to__number">1.</h2>
+                        <h5 class="how-to__subheading">Börja jämföra</h5>
+                        <p class="how-to__text">Fyll i din ansökan. Det tar runt 2 minuter och är helt kostnadsfritt.</p>
+                    </div>
+
+                    <div class="how-to__box">
+                        <h2 class="how-to__number">2.</h2>
+                        <h5 class="how-to__subheading">Långivarna budar</h5>
+                        <p class="how-to__text">Första svaret har du oftast inom ett par minuter. Sambla samarbetar med 40 banker och långivare.</p>
+                    </div>
+
+                    <div class="how-to__box">
+                        <h2 class="how-to__number">3.</h2>
+                        <h5 class="how-to__subheading">Välj låneförslag</h5>
+                        <p class="how-to__text">Få det bästa låneförslaget skickat till din e-post (eller brevlåda).</p>
+                    </div>
+
+                    <div class="how-to__box">
+                        <h2 class="how-to__number">4.</h2>
+                        <h5 class="how-to__subheading">Pengar på kontot</h5>
+                        <p class="how-to__text">Signera lånehandlingen med BankID (eller bläckpenna). Pengarna betalas sedan ut inom ett par dagar.</p>
+                    </div> 
+
+                </div>
+
+            </div>
+
+        </section>                
+            
+        <!-- Questions And Answers-->
+        <section class="questions">
+            <div class="questions__inner">
+                        
+                <div class="questions__content">
+
+                    <div class="questions__intro">
+                        <h3 class="questions__headline">Vanliga frågor!</h3>
+                        <img src="/assets/Ikons/Höger pil.svg" alt="" class="questions__arrow"> 
+                    </div>
+                        
+                        <img class="questions-image__bottom" src="assets/images/kvinna-kör-bil.jpg" alt="">
+                        <img class="questions-image__top" src="assets/images/pappa-dotter.jpg" alt="">
+
+                    <div class="questions__section">
+                        <button class="questions__button">
+                            <p class="questions__text">Vad gör en låneförmedlare?</p>
+                        </button>
+
+                        <button class="questions__button">
+                            <p class="questions__text">Vilka är kraven för att låna genom Sambla?</p>
+                        </button>
+
+                        <button class="questions__button">
+                            <p class="questions__text">Är en ansökan hos er bindande?</p>
+                        </button>
+
+                        <button class="questions__button">
+                            <p class="questions__text">Fler frågor & Svar</p>
+                        </button>  
+                    </div>
+                            
+                </div>
+
+            </div>
+
+        </section>
+
     </div>
 
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="site-footer__inner">
 
-</container>
+            <div class="site-footer__content">
 
+                <div class="footer-service">
+
+                        <div class="footer-headline">
+                            <h5 class="footer-title">Våra tjänster</h5>
+                            <img class="footer-arrow" src="assets/Ikons/Footer-pil ner.svg" alt="">
+                        </div>                        
+                    
+                    <ul class="footer-menu__list">
+                        <li class="footer-menu__item"><a href="" class="footer-menu__link">Låna pengar</a></li>
+                        <li class="footer-menu__item"><a href="" class="footer-menu__link">Privatlån</a></li>
+                        <li class="footer-menu__item"><a href="" class="footer-menu__link">Billån</a></li>
+                        <li class="footer-menu__item"><a href="" class="footer-menu__link">Bolån</a></li>
+                        <li class="footer-menu__item"><a href="" class="footer-menu__link">Samla lån</a></li>
+                        <li class="footer-menu__item"><a href="" class="footer-menu__link">Ansöka om lån</a></li>
+                        <li class="footer-menu__item"><a href="" class="footer-menu__link">Fler lånetyper</a></li>
+                    </ul>
+
+                </div>
+
+                <div class="footer-sambla">
+                
+                        <div class="footer-headline">
+                            <h5 class="footer-title">Sambla</h5>
+                            <img class="footer-arrow" src="assets/Ikons/Footer-pil ner.svg" alt=""> 
+                        </div>                       
+                                        
+                    <ul class="footer-menu__list">
+                        <li class="footer-menu__item"><a href="" class="footer-menu__link">Vår historia</a></li>
+                        <li class="footer-menu__item"><a href="" class="footer-menu__link">Frågor och svar</a></li>
+                        <li class="footer-menu__item"><a href="" class="footer-menu__link">Samarbetspartners</a></li>
+                        <li class="footer-menu__item"><a href="" class="footer-menu__link">Jobba hos oss</a></li>
+                        <li class="footer-menu__item"><a href="" class="footer-menu__link">Sambla förklarar</a></li>
+                        <li class="footer-menu__item"><a href="" class="footer-menu__link">Sambla Plus</a></li>
+                        <li class="footer-menu__item"><a href="" class="footer-menu__link">Användaravtal</a></li>
+                    </ul>  
+                </div>
+
+                <div class="footer-contact">
+
+                        <div class="footer-headline">
+                            <h5 class="footer-title__contact">Kontakta oss</h5>
+                            <img class="footer-arrow" src="assets/Ikons/Footer-pil ner.svg" alt="">
+                        </div>                        
+                    
+                    <p class="footer-text">
+                    <br>Strandvägen 5B, 114 51 Stockholm</br>
+                    <br>0770 22 01 80</br>
+                    <br>kundtjanst@sambla.se</br>
+                    <br>Mån-fre: 07-22</br></p>
+
+                </div>    
+                    
+            </div>  
+            
+                <!-- Footer Bottom -->
+       
+                <!-- Copyright -->
+                <div class="site-footer__bottom">
+                    <div class="copyright">&copy; Copyright 2022 Sambla AB Org. nr: 556974-8378, All rights reserved</div>
+
+                    <img class="footer-image" src="/assets/Ikons/Kurva footer.svg" alt="">
+                </div>
+              
+        </div>
+
+    </footer>
 
 </body>
+
+<script src="form.js" defer></script>
 </html>

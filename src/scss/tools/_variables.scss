@@ -1,8 +1,8 @@
 :root {
 
     // Fonts
-    --font-sans: sans-serif;
-    --font-serif: serif;
+    --font-sans: 'Ubuntu', 'Readex Pro', sans-serif;
+    --font-serif: 'Ubuntu', serif;
 
     // Font Base & Scale
     // Change here to change font-sizes
@@ -17,15 +17,16 @@
     --font-size-6: calc( var(--font-size-5) * var(--font-scale) );
   
     // Colors
-    --color-accent: #3694F2;
-    --color-light: #fff;
-    --color-medium: #666;
-    --color-dark: #333;
+    --color-accent: #448AFF;
+    --color-light: #FCFCFC;
+    --color-light-blue: #82B1FF;
+    --color-orange: #FFB74D;
+    --color-dark: #455A64;
 
     // Section Gaps
     --section-gap: 8rem;
     --section-gap-inner: calc( var(--section-gap) * 0.75 );
-    --section-gap-inner-small: calc ( var(--section-gap) * 0.5 );
+    --section-gap-inner-small: calc( var(--section-gap) * 0.5 );
    
    // Grid Gaps
     --grid-gap: 3rem;
@@ -39,9 +40,9 @@
     --content-width-small: 40rem;
 
     // Menu Settings
-    --menu-height: 100px;
+    --menu-height: 70px;
 
     // Grids
-    --grid-container: minmax( var (--page-padding), 1fr ) [inner-start] minmax(0, var (--page-width)) [inner-end] minmax( var (--page-padding), 1fr );
+    --grid-container: minmax( var(--page-padding), 1fr ) [inner-start] minmax(0, var(--page-width)) [inner-end] minmax( var(--page-padding), 1fr );
     --grid-content: repeat(12, 1fr);
 }

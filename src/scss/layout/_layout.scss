@@ -1,0 +1,1486 @@
+/* @use '../components/buttons' as button; */
+/* @use '../tools/colors' as color; */
+/*@use '../components/form'; */
+
+* {
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: var(--font-sans);
+    font-size: var(--font-size-1);
+    color: var(--color-dark);
+    background-color: #FCFCFC;
+}
+
+figure {
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    max-width: 100%;
+    width: auto;
+    height: auto;
+}
+
+.container {
+    grid-template-columns: var(--grid-container);
+    grid-column: inner;
+}
+
+/* Hero Sektion */
+.hero {
+    min-height: calc(100vh + var(--section-gap-inner));
+    display: grid;
+    grid-template-columns: var(--grid-container);
+    background-image: url(/assets/images/travel.jpg);
+    background-size: cover;
+}
+
+.hero__inner {
+    grid-column: inner;
+    display: grid;
+    grid-template-columns: var(--grid-content);
+    
+}
+
+.hero__content {
+    grid-column: 8 / 13;
+    margin-top: 35%;
+    text-align: center;
+}
+
+/* Formulär */
+.site-form {
+    display: grid;
+    grid-template-columns: var(--grid-container);
+}
+
+.site-form__inner {
+    grid-column: inner;
+    display: grid;
+    grid-template-columns: var(--grid-content);
+}
+
+.site-form__content {
+    background-color: #F6F6F6;
+    grid-column: 1 / 7;
+    z-index: 999;
+    overflow-y: hidden;
+    margin-top: -50%;
+    box-shadow: 10px 10px 35px;
+    padding: 20px;
+}
+
+.site-form__title {
+    text-align: center;
+}
+
+.site-form__arrow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2.3rem;
+}
+
+.loan-form {
+    display: grid;
+    margin-top: 40px;
+}
+
+/* Ansökningsformulär: Fyll i önskat lån */
+.form-section {
+    display: grid;
+    grid-template-columns: var(--grid-container);
+}
+
+.form-section__inner {
+    grid-column: inner;
+}
+
+.level {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.level__headline {
+    font-size: 16px;
+}
+
+.input {
+    background-color: var(--color-light-blue);
+    border-radius: 60px 60px 60px 60px;
+    border: 1px solid var(--color-orange);
+    width: 170px;
+    height: 30px;
+    font-size: 16px;
+    font-weight: 700;
+    text-align: center;
+}
+
+/* Submit sin förfrågan */
+.form-submit {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 2rem;
+}
+.form-submit__button {
+    background-color: var(--color-accent);
+    border: none;
+    border-radius: 50px 0px 50px 0px;
+    padding-left: 5rem;
+    padding-right: 5rem;
+    &:hover {
+        cursor: pointer;
+        background-color: var(--color-light-blue);
+    }
+}
+
+.form-submit__title {
+    color: var(--color-light);
+    font-weight: 400;
+    text-align: center;
+    margin: 1.4rem;
+}
+
+.form-approval__text {
+    text-align: center;
+    padding: 30px;
+    padding-bottom: 0;
+    font-size: 14px;
+}
+
+
+.form-legal__text {
+    text-align: center;
+    padding: 20px;
+    font-size: 10px;
+}
+
+/* Fördelar med lån */
+.loan-pros {
+    display: grid;
+    grid-template-columns: var(--grid-container);
+}
+  
+.loan-pros__inner {
+    grid-column: inner;
+    display: grid;
+    grid-template-columns: var(--grid-content);
+}
+
+.loan-pros__content {
+    margin-top: -500px;
+    grid-column: 9 / 13;
+}
+
+.loan-pros__list {
+    display: flex;
+    align-items: center;
+}
+
+.loan-pros__text {
+    margin-left: 40px;
+    line-height: 1;
+}
+
+.loan-pros__review {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 60px;
+}
+
+/* Se ditt beräknade låneförslag */
+.result-section {
+    display: grid;
+    grid-template-columns: var(--grid-container);
+    margin-top: var(--section-gap);
+}
+
+.result__columns {
+    grid-column: inner;
+    display: grid;
+}
+
+.result__content {
+    columns: 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.column {
+    width: 350px;
+    height: 180px;
+    border-bottom: 2px solid var(--color-accent);
+}
+
+.result-notification__primary {
+    text-align: center;
+}
+
+.result-notification__info {
+    text-align: center;
+}
+
+.result-notification__link {
+    text-align: center;
+}
+
+.result__text {
+    background-color: var(--color-accent);
+    font-size: 22px;
+}
+
+.result__calculation {
+    font-size: 22px;
+    padding-top: 30px;
+}
+
+/* Samarbetspartners */
+.partners {
+    margin-top: 200px;
+    display: grid;
+    grid-template-columns: var(--grid-container);
+}
+
+.partners__inner {
+    grid-column: inner;
+}
+
+.partners__content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    columns: 2;
+}
+
+.partners__info {
+    display: grid;
+    margin-bottom: 100px;
+    margin: 2rem;
+}
+
+.partners__headline {
+    grid-column: 1 / 4;
+}
+
+.partners__image {
+    display: flex;
+    flex-direction: column;
+}
+
+.partners__collaboration {
+    grid-column: 8 /12;
+    max-width: 100%;
+}
+
+.partners__arrows {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 100px;
+}
+
+/* Article Sektion */
+.article {
+    margin-top: 250px;
+    display: grid;
+    grid-template-columns: var(--grid-container);
+}
+
+.article__inner {
+    grid-column: inner;
+    display: grid;
+}
+
+.article__content {
+    display: flex;
+    align-items: center;
+}
+
+.content__one {
+    margin: 40px;
+    padding: 10px;
+}
+
+.content__two {
+    margin: 40px;
+    padding: 10px;
+}
+
+.content__image {
+    max-width: 80%;
+    box-shadow: 80px 30px #82B1FF;
+    margin-bottom: 30px;
+}
+
+.content__link {
+    display: flex;
+    justify-content: right;
+}
+
+.content__text {
+    line-height: 3;
+    font-size: 14px;
+}
+
+/* Sambla förklarar - så fungerar det */
+.how-to {
+    background-color: var(--color-light-blue);
+    margin-top: var(--section-gap);
+    display: grid;
+    grid-template-columns: var(--grid-container);
+    padding-bottom: var(--menu-height);
+}
+
+.how-to__inner {
+    grid-column: inner;
+    display: grid;
+}
+
+.how-to__section {
+    display: flex;
+    margin-top: 60px;
+    margin-left: 200px;
+    margin-bottom: 70px;
+    align-items: center;
+}
+
+.how-to__arrow {
+    margin-left: 70px
+}
+
+.how-to__content {
+    columns: 4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    justify-content: space-evenly;
+}
+
+.how-to__box {
+    margin: 10px;
+}
+
+.how-to__number {
+    color: var(--color-orange)
+}
+
+/* Vanliga frågor */
+
+.questions {
+    margin-top: 200px;
+    margin-bottom: 200px;
+    display: grid;
+    grid-template-columns: var(--grid-container);
+}
+
+.questions__inner {
+    grid-column: inner;
+    display: grid;
+}
+
+.questions__intro {
+    display: flex;
+    margin-top: 60px;
+    margin-left: 650px;
+    margin-bottom: 50px;
+    align-items: center;
+    background-color: var(--color-light-blue);
+    width: 733px;
+    padding-left: 10px;
+}
+
+.questions__arrow {
+    margin-left: 80px;
+}
+
+.questions-image__bottom {
+    grid-column: 2 / 5;
+    max-width: 30%;
+}
+
+.questions-image__top {
+    grid-column: 4 / 7;
+    margin-bottom: 200px;
+    margin-left: -180px;
+    box-shadow: 10px 10px 35px;
+    max-width: 30%;
+}
+
+.questions__section {
+    margin-top: -500px;
+}
+
+.questions__button {
+    display: flex;
+    background-color: #448AFF;
+    border-radius: 50px 0px 50px 0px;
+    border-color: #448AFF;
+    width: 400px;
+    margin: 40px;
+    margin-left: 750px;
+    justify-content: center;
+    align-items: center;
+    &:hover {
+        cursor: pointer;
+        background-color: var(--color-light-blue);
+    }
+}
+
+.questions__text {
+    color: var(--color-light);
+}
+
+/* Subpage layout */
+
+/* Subpage hero sektion */
+.sub-hero {
+    min-height: calc(100vh + var(--section-gap-inner));
+    display: grid;
+    grid-template-columns: var(--grid-container);
+    background-color: var(--color-light-blue);
+    background-size: cover;
+}
+
+.sub-hero__inner {
+    grid-column: inner;
+    display: grid;
+    grid-template-columns: var(--grid-content);
+    
+}
+
+.sub-hero__content {
+    grid-column: 8 / 13;
+    margin-top: 45%;
+    text-align: center;
+}
+
+.sub-hero__title {
+    margin-top: 50px;
+    grid-column: 8 / 12;
+    line-height: 2.5rem;
+}
+
+.sub-hero__text {
+    grid-column: 9 / 11;
+    font-size: 16;
+    line-height: 2.5rem;
+}
+
+/* Subpage Hero Image */
+.subpage-form {
+    display: grid;
+    grid-template-columns: var(--grid-container);
+}
+
+.subpage-form__inner {
+    grid-column: inner;
+    display: grid;
+    grid-template-columns: var(--grid-content);
+}
+
+.subpage-form__content {
+    grid-column: 2 / 7;
+    z-index: 999;
+    overflow-y: hidden;
+    margin-top: -80%;
+    box-shadow: 10px 10px 35px;
+}
+
+/* Subpage - Vad är egentligen ett bolån? */
+.first-content {
+    display: grid;
+    grid-template-columns: var(--grid-container);
+}
+
+.first-content__inner {
+    grid-column: inner;
+    display: grid;
+    grid-template-columns: var(--grid-content);
+}
+
+.first-content__content {
+    margin-top: -300px;
+    grid-column: 8 / 13;
+}
+
+.first-content__headline {
+    line-height: 2.5rem;
+}
+
+.first-content__text {
+    font-size: 16px;
+    line-height: 2.5rem;
+}
+
+/* Subpage - Bostaden som säkerhet */
+.security {
+    display: grid;
+    grid-template-columns: var(--grid-container);
+    margin-top: var(--section-gap);
+}
+
+.security__inner {
+    grid-column: inner;
+    display: grid;
+    grid-template-columns: var(--grid-content);
+}
+
+.security__content {
+    grid-column: 2 / 11;
+}
+
+.security__headline {
+    margin-bottom: 2.5rem;
+}
+
+.security__text {
+    line-height: 2.5rem;
+    font-size: 16;
+    padding-bottom: 30px;
+}
+
+/* Subpage - Rörlig eller bunden ränta – eller både och? */
+.ranta {
+    display: grid;
+    grid-template-columns: var(--grid-container);
+    margin-top: 3rem;
+}
+
+.ranta__inner {
+    grid-column: inner;
+    display: grid;
+    grid-template-columns: var(--grid-content);
+    
+}
+
+.ranta__content {
+    grid-column: 2 / 12;
+}
+
+.ranta__headline {
+    margin-bottom: 2.5rem;
+    background-color: var(--color-light-blue);
+    width: 1275px;
+    padding: 30px;
+}
+
+.ranta__text {
+    line-height: 2rem;
+    font-size: 16;
+    padding-bottom: 30px;
+}
+
+.ranta__button {
+    display: flex;
+    grid-column: inner;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 3rem;
+}
+
+.ranta-button__one {
+    display: flex;
+    align-items: center;
+    background-color: #448AFF;
+    border-radius: 50px 0px 50px 0px;
+    border-color: #448AFF;
+    &:hover {
+        cursor: pointer;
+        background-color: var(--color-light-blue);
+    }
+}
+
+.ranta-button__two {
+    display: flex;
+    align-items: center;
+    background-color: #448AFF;
+    border-radius: 50px 0px 50px 0px;
+    border-color: #448AFF;
+    &:hover {
+        cursor: pointer;
+        background-color: var(--color-light-blue);
+    }
+}
+
+.ranta-button__headline {
+    margin-left: 2.9rem;
+    color: var(--color-light);
+}
+
+.ranta-button__arrow {
+    margin-left: 1.7rem;
+    margin-right: 1rem;
+}
+
+/* Subpage - Ansöka om bolån genom Sambla */
+.bolan {
+    display: grid;
+    grid-template-columns: var(--grid-container);
+}
+
+.bolan__inner {
+    grid-column: inner;
+    display: grid;
+    margin-top: var(--section-gap);
+    grid-template-columns: var(--grid-content);
+
+}
+
+.bolan__content {
+    grid-column: 1 / 8;
+}
+
+.bolan-content__info {
+    grid-column: 2 / 6;
+    display: flex;
+    margin-bottom: 2rem;
+}
+
+.bolan__arrow {
+    margin-left: 10rem;
+}
+
+.bolan-content__demands {
+    grid-column: 2 / 6;
+}
+
+.bolan-demands__text {
+    grid-column: 2 / 6;
+    margin-bottom: 3rem;
+}
+
+.bolan__column {
+    grid-column: 7 / 12;
+}
+
+.bolan-image {
+    margin-bottom: var(--section-gap);
+    grid-column: 8 / 11;
+    max-width: 80%;
+    box-shadow: 80px 30px #82B1FF;
+}
+
+.bolan__button {
+    align-items: center;
+    background-color: #448AFF;
+    border-radius: 50px 0px 50px 0px;
+    border-color: #448AFF;
+    &:hover {
+        cursor: pointer;
+        background-color: var(--color-light-blue);
+    }
+    margin-top: var(--section-gap);
+}
+
+.bolan-button__headline {
+    font-size: 14px;
+    color: var(--color-light);
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+}
+
+/* Subpage - I behov av ett annat typ av lån? */
+.new-loan {
+    margin-top: var(--section-gap);
+    display: grid;
+    grid-template-columns: var(--grid-container);
+}
+
+.new-loan__inner {
+    grid-column: inner;
+}
+
+.new-loan__content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    columns: 2;
+    margin-top: var(--section-gap);
+}
+
+.new-loan__info {
+    display: grid;
+    margin-bottom: 4rem;
+    margin-left: 10rem;
+}
+
+.new-loan__headline {
+    line-height: 2.5rem;
+}
+
+.new-loan__text {
+    line-height: 2.5rem;
+}
+
+.new-loan__image {
+    display: flex;
+    flex-direction: column;
+    max-width: 35%;
+}
+
+.new-loan__picture {
+    grid-column: 8 /12;
+    max-width: 100%;
+}
+
+.privateloan__arrows {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 3rem;
+}
+
+.new-loan__intro {
+    display: flex;
+    margin-top: 60px;
+    margin-left: 650px;
+    margin-bottom: 50px;
+    align-items: center;
+    background-color: var(--color-light-blue);
+    width: 733px;
+    padding-left: 10px;
+}
+
+/* Responsivitet 1530px */
+@media screen and (max-width: 1530px) {
+    /* Questions */
+    .questions__arrow {
+        margin-left: 30px;
+    }
+
+    .questions-image__bottom {
+        grid-column: 2 / 5;
+        max-width: 20%; 
+    }   
+
+    .questions-image__top {
+        grid-column: 4 / 7;
+        margin-bottom: 200px;
+        margin-left: -80px;
+        box-shadow: 10px 10px 35px;
+        max-width: 20%;
+    }
+
+    .questions__button {
+        display: flex;
+        background-color: #448AFF;
+        border-radius: 50px 0px 50px 0px;
+        border-color: #448AFF;
+        width: 300px;
+        margin: 20px;
+        margin-left: 600px;
+        justify-content: center;
+        align-items: center;
+        &:hover {
+            cursor: pointer;
+            background-color: var(--color-light-blue);
+        }
+    }
+    
+    .questions__text {
+        color: var(--color-light);
+        font-size: 12px;
+    }
+    
+    .questions__intro {
+        display: flex;
+        margin-top: 60px;
+        margin-bottom: 60px;
+        align-items: center;
+        background-color: var(--color-light);
+        width: auto;
+        padding-left: 10px;
+    }
+
+    .questions__headline {
+        font-size: 24px;
+    }
+
+    .questions__section {
+        margin-top: -400px;
+    }
+    
+    .questions {
+        margin-top: 100px;
+        margin-bottom: 200px;
+        display: grid;
+        grid-template-columns: var(--grid-container);
+    }
+}
+
+/* Responsivitet 1170px */
+@media screen and (max-width: 1170px) {
+    /* Loan pros */
+    
+    .loan-pros__content {
+        margin-top: -500px;
+        grid-column: 8 / 12;
+    }
+    
+    /* Sambla förklarar: How to */
+    .how-to {
+        background-color: var(--color-light-blue);
+        margin-top: var(--section-gap);
+        display: grid;
+        grid-template-columns: var(--grid-container);
+        padding-bottom: var(--menu-height);
+    }
+    
+    .how-to__inner {
+        grid-column: inner;
+        display: grid;
+    }
+    
+    .how-to__section {
+        display: flex;
+        margin-top: 60px;
+        margin-left: 200px;
+        margin-bottom: 40px;
+        align-items: center;
+    }
+    
+    .how-to__arrow {
+        margin-left: 70px
+    }
+    
+    .how-to__content {
+        display: none;
+        display: grid;
+        justify-content: left;
+        text-align: left;
+    }
+    
+    .how-to__box {
+        margin: 0px;
+    }
+    
+    /* Questions */
+    .questions__arrow {
+        margin-left: 30px;
+    }
+
+    .questions-image__bottom {
+        grid-column: 3 / 6;
+        max-width: 20%; 
+        margin-left: 60px;
+    }   
+
+    .questions-image__top {
+        grid-column: 4 / 7;
+        margin-bottom: 100px;
+        margin-left: -80px;
+        box-shadow: 10px 10px 35px;
+        max-width: 20%;
+    }
+
+    .questions__button {
+        display: flex;
+        background-color: #448AFF;
+        border-radius: 50px 0px 50px 0px;
+        border-color: #448AFF;
+        width: 300px;
+        margin: 20px;
+        margin-left: 500px;
+        justify-content: center;
+        align-items: center;
+        &:hover {
+            cursor: pointer;
+            background-color: var(--color-light-blue);
+        }
+    }
+    
+    .questions__text {
+        color: var(--color-light);
+        font-size: 12px;
+    }
+    
+    .questions__intro {
+        display: flex;
+        margin-top: 60px;
+        margin-bottom: 60px;
+        margin-left: 60px;
+        align-items: center;
+        background-color: var(--color-light);
+        padding-left: 10px;
+    }
+
+    .questions__headline {
+        font-size: 24px;
+    }
+
+    .questions__section {
+        margin-top: -400px;
+    }
+    
+    .questions {
+        margin-top: 100px;
+        margin-bottom: 200px;
+        display: grid;
+        grid-template-columns: var(--grid-container);
+    }
+}
+
+/* Responsivitet 1080px */
+@media screen and (max-width: 1080px) {
+    /* Formulär */
+    .form-section {
+        display: grid;
+        grid-template-columns: var(--grid-container);
+    }
+    
+    .form-section__inner {
+        grid-column: inner;
+    }
+    
+    .level {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+    .level__headline {
+        font-size: 16px;
+    }
+    
+    .input {
+        background-color: var(--color-light-blue);
+        border-radius: 60px 60px 60px 60px;
+        border: 1px solid var(--color-orange);
+        width: 120px;
+        height: 30px;
+        font-size: 16px;
+        font-weight: 700;
+        text-align: center;
+    }
+    
+    /* Submit sin förfrågan */
+    .form-submit {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin-top: 2rem;
+    }
+    .form-submit__button {
+        background-color: var(--color-accent);
+        border: none;
+        border-radius: 50px 0px 50px 0px;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+        &:hover {
+            cursor: pointer;
+            background-color: var(--color-light-blue);
+        }
+    }
+    
+    .form-submit__title {
+        color: var(--color-light);
+        font-weight: 400;
+        text-align: center;
+        margin: 1.4rem;
+    }
+    
+    .form-approval__text {
+        text-align: center;
+        padding: 10px;
+        padding-bottom: 0;
+        font-size: 14px;
+    }
+    
+    
+    .form-legal__text {
+        text-align: center;
+        padding: 10px;
+        font-size: 10px;
+    }
+    
+    /* Loan pros */
+    .loan-pros__headline {
+        font-size: 22px;
+    }
+
+    .loan-pros__content {
+        margin-top: 100px;
+        grid-column: 2 / 6;
+    }
+
+    /* Calculated result */
+    .result__content {
+        display: none;
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+}
+
+/* Responsivitet 1000px */
+@media screen and (max-width: 1000px) {
+    /* Partners */
+    .partners {
+        margin-top: 200px;
+        display: grid;
+        grid-template-columns: var(--grid-container);
+    }
+    
+    .partners__inner {
+        grid-column: inner;
+    }
+    
+    .partners__content {
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .partners__info {
+        display: grid;
+        margin-bottom: 100px;
+        margin: 2rem;
+    }
+    
+    .partners__headline {
+        grid-column: 1 / 4;
+    }
+    
+    .partners__image {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .partners__collaboration {
+        grid-column: 8 /12;
+        max-width: 100%;
+    }
+    
+    .partners__arrows {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 100px;
+    }
+
+    /* Questions */
+    .questions__arrow {
+        margin-left: 30px;
+    }
+
+    .questions-image__bottom {
+        grid-column: 3 / 6;
+        max-width: 30%; 
+        margin-left: 80px;
+    }   
+
+    .questions-image__top {
+        grid-column: 4 / 7;
+        margin-bottom: 100px;
+        margin-left: -170px;
+        box-shadow: 10px 10px 35px;
+        max-width: 30%;
+    }
+
+    .questions__button {
+        display: flex;
+        background-color: #448AFF;
+        border-radius: 50px 0px 50px 0px;
+        border-color: #448AFF;
+        width: 300px;
+        margin: 20px;
+        margin-left: 500px;
+        justify-content: center;
+        align-items: center;
+        &:hover {
+            cursor: pointer;
+            background-color: var(--color-light-blue);
+        }
+    }
+    
+    .questions__text {
+        color: var(--color-light);
+        font-size: 12px;
+    }
+    
+    .questions__intro {
+        display: flex;
+        margin-top: 60px;
+        margin-bottom: 60px;
+        margin-left: 60px;
+        align-items: center;
+        background-color: var(--color-light);
+        padding-left: 10px;
+    }
+
+    .questions__headline {
+        font-size: 24px;
+    }
+
+    .questions__section {
+        margin-top: -400px;
+    }
+    
+    .questions {
+        margin-top: 100px;
+        margin-bottom: 200px;
+        display: grid;
+        grid-template-columns: var(--grid-container);
+    }
+}
+
+/* Responsivitet 980px */
+@media screen and (max-width: 980px) {
+    /* Subpage Hero section */
+    .sub-hero__content {
+        grid-column: 2 / 12;
+        margin-top: 20%;
+        text-align: center;
+    }
+
+    .sub-hero__title {
+        font-size: 22px;
+    }
+
+    .first-content__content {
+        margin-top: -250px;
+        grid-column: 8 / 13;
+        margin-bottom: -100px;
+    }
+
+    .security__content {
+        grid-column: 2 / 12;
+    }
+
+    /* Ränta */
+    .ranta__headline {
+        font-size: 18px;
+        background-color: var(--color-light);
+    }
+
+    .ranta-button__headline {
+        font-size: 14px;
+    }
+
+    .new-loan__intro {
+        display: flex;
+        margin-top: 60px;
+        margin-left: 60px;
+        margin-bottom: 50px;
+        align-items: center;
+        background-color: var(--color-light);
+        padding-left: 10px;
+    }
+    /* Hero sektion */
+    .hero__content {
+        grid-column: 1 / 7;
+        margin-top: 70%;
+        margin-bottom: 100px;
+        text-align: center;
+    }
+
+    .hero__title {
+        font-size: 22px;
+    }
+
+    
+    /* Formulär */
+    .site-form__title {
+        font-size: 22px;
+    }
+    .form-section {
+        display: grid;
+        grid-template-columns: var(--grid-container);
+    }
+    
+    .form-section__inner {
+        grid-column: inner;
+    }
+    
+    .level {
+        display: none;
+        display: grid;
+        justify-content: left;
+        margin-left: 50px;
+        text-align: center;
+    }
+    
+    .level__headline {
+        font-size: 16px;
+    }
+    
+    .input {
+        background-color: var(--color-light-blue);
+        border-radius: 60px 60px 60px 60px;
+        border: 1px solid var(--color-orange);
+        width: 230px;
+        height: 30px;
+        font-size: 16px;
+        font-weight: 700;
+        text-align: center;
+    }
+    
+    /* Submit sin förfrågan */
+    .form-submit {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin-top: 2rem;
+    }
+    .form-submit__button {
+        background-color: var(--color-accent);
+        border: none;
+        border-radius: 50px 0px 50px 0px;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        &:hover {
+            cursor: pointer;
+            background-color: var(--color-light-blue);
+        }
+    }
+    
+    .form-submit__title {
+        color: var(--color-light);
+        font-weight: 300;
+        text-align: center;
+        margin: 1.4rem;
+        font-size: 18px;
+    }
+    
+    .form-approval__text {
+        text-align: center;
+        padding: 5px;
+        padding-bottom: 0;
+        font-size: 10px;
+        line-height: 1.2rem;
+        margin-top: 1.4rem;
+
+    }
+    
+    
+    .form-legal__text {
+        text-align: center;
+        padding: 2px;
+        font-size: 10px;
+    }
+    
+    /* Loan pros */
+    .loan-pros__headline {
+        font-size: 22px;
+    }
+
+    .loan-pros__content {
+        margin-top: 100px;
+        grid-column: 2 / 6;
+    }
+
+    /* Calculated result */
+    .result__content {
+        display: none;
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+}
+
+/* Responsivitet 810px */
+@media screen and (max-width: 810px) {
+    /* Subpage content */
+    .first-content__content {
+        margin-top: -400px;
+        grid-column: 8 / 13;
+        margin-bottom: -100px;
+    }
+
+    .first-content__headline {
+        font-size: 22px;
+    }
+    
+    /* Partners */
+    .partners {
+        margin-top: 200px;
+        display: grid;
+        grid-template-columns: var(--grid-container);
+    }
+    
+    .partners__inner {
+        grid-column: inner;
+    }
+    
+    .partners__content {
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .partners__info {
+        display: grid;
+        margin-bottom: 100px;
+        margin: 2rem;
+    }
+    
+    .partners__headline {
+        grid-column: 1 / 4;
+        font-size: 22px;
+    }
+    
+    .partners__image {
+        display: flex;
+    }
+    
+    .partners__collaboration {
+        max-width: 100%;
+    }
+
+
+    /* Article */
+    .content__title {
+        font-size: 22px;
+    }
+    .content__text {
+        line-height: 1.8rem;
+    }
+
+    .content__image {
+        max-width: 100%;
+        box-shadow: 20px 5px #82B1FF;
+        margin-bottom: 30px;
+    }
+}
+
+
+/* Responsivitet 530px */
+@media screen and (max-width: 530px) {
+    /* Partners */
+    .partners {
+        margin-top: 200px;
+        display: grid;
+        grid-template-columns: var(--grid-container);
+    }
+    
+    .partners__inner {
+        grid-column: inner;
+    }
+    
+    .partners__content {
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .partners__info {
+        display: grid;
+        margin-bottom: 100px;
+        margin: 2rem;
+    }
+    
+    .partners__headline {
+        grid-column: 1 / 4;
+        font-size: 22px;
+    }
+    
+    .partners__image {
+        display: flex;
+    }
+    
+    .partners__collaboration {
+        max-width: 100%;
+    }
+
+    .partners__arrows {
+        width: 41px;
+        height: 31px;
+    }
+
+    /* Article */
+    .content__title {
+        font-size: 24px;
+    }
+    
+    .content__text {
+        font-size: 18px;
+        line-height: 1.8rem;
+    }
+
+    .content__image {
+        max-width: 100%;
+        box-shadow: 30px 10px #82B1FF;
+        margin-bottom: 30px;
+    }
+    
+    /* Questions */
+    .questions__arrow {
+        margin-left: 30px;
+    }
+
+    .questions-image__bottom {
+        grid-column: 3 / 6;
+        max-width: 30%; 
+        margin-left: 80px;
+    }   
+
+    .questions-image__top {
+        grid-column: 4 / 7;
+        margin-bottom: 100px;
+        margin-left: -170px;
+        box-shadow: 10px 10px 35px;
+        max-width: 30%;
+    }
+
+    .questions__button {
+        display: flex;
+        background-color: #448AFF;
+        border-radius: 50px 0px 50px 0px;
+        border-color: #448AFF;
+        width: 250px;
+        margin: 20px;
+        margin-left: 450px;
+        justify-content: center;
+        align-items: center;
+        &:hover {
+            cursor: pointer;
+            background-color: var(--color-light-blue);
+        }
+    }
+    
+    .questions__text {
+        color: var(--color-light);
+        font-size: 12px;
+    }
+    
+    .questions__intro {
+        display: flex;
+        margin-top: 60px;
+        margin-bottom: 60px;
+        margin-left: 60px;
+        align-items: center;
+        background-color: var(--color-light);
+        padding-left: 10px;
+    }
+
+    .questions__headline {
+        font-size: 24px;
+    }
+
+    .questions__section {
+        margin-top: -400px;
+    }
+    
+    .questions {
+        margin-top: 100px;
+        margin-bottom: 200px;
+        display: grid;
+        grid-template-columns: var(--grid-container);
+    }
+}
