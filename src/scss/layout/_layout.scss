@@ -1,11 +1,11 @@
-/* @use '../components/buttons' as button; */
-/* @use '../tools/colors' as color; */
-/*@use '../components/form'; */
-
 * {
     box-sizing: border-box;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
@@ -40,52 +40,53 @@ img {
     grid-template-columns: var(--grid-container);
     background-image: url(/assets/images/travel.jpg);
     background-size: cover;
-}
-
-.hero__inner {
-    grid-column: inner;
-    display: grid;
-    grid-template-columns: var(--grid-content);
     
+    &__inner {
+        grid-column: inner;
+        display: grid;
+        grid-template-columns: var(--grid-content);
+        
+    }
+    
+    &__content {
+        grid-column: 8 / 13;
+        margin-top: 35%;
+        text-align: center;
+    }
 }
 
-.hero__content {
-    grid-column: 8 / 13;
-    margin-top: 35%;
-    text-align: center;
-}
 
 /* Formulär */
 .site-form {
     display: grid;
     grid-template-columns: var(--grid-container);
-}
-
-.site-form__inner {
-    grid-column: inner;
-    display: grid;
-    grid-template-columns: var(--grid-content);
-}
-
-.site-form__content {
-    background-color: #F6F6F6;
-    grid-column: 1 / 7;
-    z-index: 999;
-    overflow-y: hidden;
-    margin-top: -50%;
-    box-shadow: 10px 10px 35px;
-    padding: 20px;
-}
-
-.site-form__title {
-    text-align: center;
-}
-
-.site-form__arrow {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 2.3rem;
+    
+    &__inner {
+        grid-column: inner;
+        display: grid;
+        grid-template-columns: var(--grid-content);
+    }
+    
+    &__content {
+        background-color: #F6F6F6;
+        grid-column: 1 / 7;
+        z-index: 999;
+        overflow-y: hidden;
+        margin-top: -50%;
+        box-shadow: 10px 10px 35px;
+        padding: 20px;
+    }
+    
+    &__title {
+        text-align: center;
+    }
+    
+    &__arrow {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 2.3rem;
+    }
 }
 
 .loan-form {
@@ -97,22 +98,24 @@ img {
 .form-section {
     display: grid;
     grid-template-columns: var(--grid-container);
+
+    &__inner {
+        grid-column: inner;
+    }
 }
 
-.form-section__inner {
-    grid-column: inner;
-}
 
 .level {
     display: flex;
     justify-content: center;
     align-items: center;
     justify-content: space-between;
+    
+    &__headline {
+        font-size: 16px;
+    }
 }
 
-.level__headline {
-    font-size: 16px;
-}
 
 .input {
     background-color: var(--color-light-blue);
@@ -132,24 +135,25 @@ img {
     align-items: center;
     text-align: center;
     margin-top: 2rem;
-}
-.form-submit__button {
-    background-color: var(--color-accent);
-    border: none;
-    border-radius: 50px 0px 50px 0px;
-    padding-left: 5rem;
-    padding-right: 5rem;
-    &:hover {
-        cursor: pointer;
-        background-color: var(--color-light-blue);
+    
+    &__button {
+        background-color: var(--color-accent);
+        border: none;
+        border-radius: 50px 0px 50px 0px;
+        padding-left: 5rem;
+        padding-right: 5rem;
+        &:hover {
+            cursor: pointer;
+            background-color: var(--color-light-blue);
+        }
     }
-}
-
-.form-submit__title {
-    color: var(--color-light);
-    font-weight: 400;
-    text-align: center;
-    margin: 1.4rem;
+    
+    &__title {
+        color: var(--color-light);
+        font-weight: 300;
+        text-align: center;
+        margin: 1.4rem;
+    }
 }
 
 .form-approval__text {
@@ -170,37 +174,37 @@ img {
 .loan-pros {
     display: grid;
     grid-template-columns: var(--grid-container);
+    
+    &__inner {
+        grid-column: inner;
+        display: grid;
+        grid-template-columns: var(--grid-content);
+    }
+    
+    &__content {
+        margin-top: -500px;
+        grid-column: 9 / 13;
+    }
+    
+    &__list {
+        display: flex;
+        align-items: center;
+    }
+    
+    &__text {
+        margin-left: 40px;
+        line-height: 1;
+    }
+    
+    &__review {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        justify-content: space-evenly;
+        margin-top: 60px;
+    }
 }
   
-.loan-pros__inner {
-    grid-column: inner;
-    display: grid;
-    grid-template-columns: var(--grid-content);
-}
-
-.loan-pros__content {
-    margin-top: -500px;
-    grid-column: 9 / 13;
-}
-
-.loan-pros__list {
-    display: flex;
-    align-items: center;
-}
-
-.loan-pros__text {
-    margin-left: 40px;
-    line-height: 1;
-}
-
-.loan-pros__review {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    justify-content: space-evenly;
-    margin-top: 60px;
-}
-
 /* Se ditt beräknade låneförslag */
 .result-section {
     display: grid;
@@ -242,6 +246,8 @@ img {
 .result__text {
     background-color: var(--color-accent);
     font-size: 22px;
+    color: var(--color-light);
+    font-weight: 300;
 }
 
 .result__calculation {
@@ -254,61 +260,62 @@ img {
     margin-top: 200px;
     display: grid;
     grid-template-columns: var(--grid-container);
-}
-
-.partners__inner {
-    grid-column: inner;
-}
-
-.partners__content {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    columns: 2;
-}
-
-.partners__info {
-    display: grid;
-    margin-bottom: 100px;
-    margin: 2rem;
-}
-
-.partners__headline {
-    grid-column: 1 / 4;
-}
-
-.partners__image {
-    display: flex;
-    flex-direction: column;
-}
-
-.partners__collaboration {
-    grid-column: 8 /12;
-    max-width: 100%;
-}
-
-.partners__arrows {
-    display: flex;
-    justify-content: space-evenly;
-    margin-top: 100px;
+    
+    &__inner {
+        grid-column: inner;
+    }
+    
+    &__content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        columns: 2;
+    }
+    
+    &__info {
+        display: grid;
+        margin-bottom: 100px;
+        margin: 2rem;
+    }
+    
+    &__headline {
+        grid-column: 1 / 4;
+    }
+    
+    &__image {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    &__collaboration {
+        grid-column: 8 /12;
+        max-width: 100%;
+    }
+    
+    &__arrows {
+        display: flex;
+        justify-content: space-evenly;
+        margin-top: 100px;
+    }
 }
 
 /* Article Sektion */
 .article {
-    margin-top: 250px;
+    margin-top: 180px;
     display: grid;
     grid-template-columns: var(--grid-container);
+    
+    &__inner {
+        grid-column: inner;
+        display: grid;
+    }
+    
+    &__content {
+        display: flex;
+        align-items: center;
+    }
 }
 
-.article__inner {
-    grid-column: inner;
-    display: grid;
-}
-
-.article__content {
-    display: flex;
-    align-items: center;
-}
 
 .content__one {
     margin: 40px;
@@ -343,447 +350,94 @@ img {
     display: grid;
     grid-template-columns: var(--grid-container);
     padding-bottom: var(--menu-height);
-}
-
-.how-to__inner {
-    grid-column: inner;
-    display: grid;
-}
-
-.how-to__section {
-    display: flex;
-    margin-top: 60px;
-    margin-left: 200px;
-    margin-bottom: 70px;
-    align-items: center;
-}
-
-.how-to__arrow {
-    margin-left: 70px
-}
-
-.how-to__content {
-    columns: 4;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    justify-content: space-evenly;
-}
-
-.how-to__box {
-    margin: 10px;
-}
-
-.how-to__number {
-    color: var(--color-orange)
+    
+    &__inner {
+        grid-column: inner;
+        display: grid;
+    }
+    
+    &__section {
+        display: flex;
+        margin-top: 60px;
+        margin-left: 200px;
+        margin-bottom: 70px;
+        align-items: center;
+    }
+    
+    &__arrow {
+        margin-left: 70px
+    }
+    
+    &__content {
+        columns: 4;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        justify-content: space-evenly;
+    }
+    
+    &__box {
+        margin: 10px;
+    }
+    
+    &__number {
+        color: var(--color-orange)
+    }
 }
 
 /* Vanliga frågor */
-
 .questions {
-    margin-top: 200px;
-    margin-bottom: 200px;
+    margin-top: var(--section-gap);
+    margin-bottom: 10rem;
     display: grid;
     grid-template-columns: var(--grid-container);
-}
-
-.questions__inner {
-    grid-column: inner;
-    display: grid;
-}
-
-.questions__intro {
-    display: flex;
-    margin-top: 60px;
-    margin-left: 650px;
-    margin-bottom: 50px;
-    align-items: center;
-    background-color: var(--color-light-blue);
-    width: 733px;
-    padding-left: 10px;
-}
-
-.questions__arrow {
-    margin-left: 80px;
-}
-
-.questions-image__bottom {
-    grid-column: 2 / 5;
-    max-width: 30%;
-}
-
-.questions-image__top {
-    grid-column: 4 / 7;
-    margin-bottom: 200px;
-    margin-left: -180px;
-    box-shadow: 10px 10px 35px;
-    max-width: 30%;
-}
-
-.questions__section {
-    margin-top: -500px;
-}
-
-.questions__button {
-    display: flex;
-    background-color: #448AFF;
-    border-radius: 50px 0px 50px 0px;
-    border-color: #448AFF;
-    width: 400px;
-    margin: 40px;
-    margin-left: 750px;
-    justify-content: center;
-    align-items: center;
-    &:hover {
-        cursor: pointer;
-        background-color: var(--color-light-blue);
-    }
-}
-
-.questions__text {
-    color: var(--color-light);
-}
-
-/* Subpage layout */
-
-/* Subpage hero sektion */
-.sub-hero {
-    min-height: calc(100vh + var(--section-gap-inner));
-    display: grid;
-    grid-template-columns: var(--grid-container);
-    background-color: var(--color-light-blue);
-    background-size: cover;
-}
-
-.sub-hero__inner {
-    grid-column: inner;
-    display: grid;
-    grid-template-columns: var(--grid-content);
     
-}
+    &__inner {
+        grid-column: inner;
+        display: grid;
+    }
 
-.sub-hero__content {
-    grid-column: 8 / 13;
-    margin-top: 45%;
-    text-align: center;
-}
-
-.sub-hero__title {
-    margin-top: 50px;
-    grid-column: 8 / 12;
-    line-height: 2.5rem;
-}
-
-.sub-hero__text {
-    grid-column: 9 / 11;
-    font-size: 16;
-    line-height: 2.5rem;
-}
-
-/* Subpage Hero Image */
-.subpage-form {
-    display: grid;
-    grid-template-columns: var(--grid-container);
-}
-
-.subpage-form__inner {
-    grid-column: inner;
-    display: grid;
-    grid-template-columns: var(--grid-content);
-}
-
-.subpage-form__content {
-    grid-column: 2 / 7;
-    z-index: 999;
-    overflow-y: hidden;
-    margin-top: -80%;
-    box-shadow: 10px 10px 35px;
-}
-
-/* Subpage - Vad är egentligen ett bolån? */
-.first-content {
-    display: grid;
-    grid-template-columns: var(--grid-container);
-}
-
-.first-content__inner {
-    grid-column: inner;
-    display: grid;
-    grid-template-columns: var(--grid-content);
-}
-
-.first-content__content {
-    margin-top: -300px;
-    grid-column: 8 / 13;
-}
-
-.first-content__headline {
-    line-height: 2.5rem;
-}
-
-.first-content__text {
-    font-size: 16px;
-    line-height: 2.5rem;
-}
-
-/* Subpage - Bostaden som säkerhet */
-.security {
-    display: grid;
-    grid-template-columns: var(--grid-container);
-    margin-top: var(--section-gap);
-}
-
-.security__inner {
-    grid-column: inner;
-    display: grid;
-    grid-template-columns: var(--grid-content);
-}
-
-.security__content {
-    grid-column: 2 / 11;
-}
-
-.security__headline {
-    margin-bottom: 2.5rem;
-}
-
-.security__text {
-    line-height: 2.5rem;
-    font-size: 16;
-    padding-bottom: 30px;
-}
-
-/* Subpage - Rörlig eller bunden ränta – eller både och? */
-.ranta {
-    display: grid;
-    grid-template-columns: var(--grid-container);
-    margin-top: 3rem;
-}
-
-.ranta__inner {
-    grid-column: inner;
-    display: grid;
-    grid-template-columns: var(--grid-content);
+    &__content {
+        display: grid;
+    }
     
-}
-
-.ranta__content {
-    grid-column: 2 / 12;
-}
-
-.ranta__headline {
-    margin-bottom: 2.5rem;
-    background-color: var(--color-light-blue);
-    width: 1275px;
-    padding: 30px;
-}
-
-.ranta__text {
-    line-height: 2rem;
-    font-size: 16;
-    padding-bottom: 30px;
-}
-
-.ranta__button {
-    display: flex;
-    grid-column: inner;
-    justify-content: center;
-    align-items: center;
-    justify-content: space-evenly;
-    margin-top: 3rem;
-}
-
-.ranta-button__one {
-    display: flex;
-    align-items: center;
-    background-color: #448AFF;
-    border-radius: 50px 0px 50px 0px;
-    border-color: #448AFF;
-    &:hover {
-        cursor: pointer;
-        background-color: var(--color-light-blue);
-    }
-}
-
-.ranta-button__two {
-    display: flex;
-    align-items: center;
-    background-color: #448AFF;
-    border-radius: 50px 0px 50px 0px;
-    border-color: #448AFF;
-    &:hover {
-        cursor: pointer;
-        background-color: var(--color-light-blue);
-    }
-}
-
-.ranta-button__headline {
-    margin-left: 2.9rem;
-    color: var(--color-light);
-}
-
-.ranta-button__arrow {
-    margin-left: 1.7rem;
-    margin-right: 1rem;
-}
-
-/* Subpage - Ansöka om bolån genom Sambla */
-.bolan {
-    display: grid;
-    grid-template-columns: var(--grid-container);
-}
-
-.bolan__inner {
-    grid-column: inner;
-    display: grid;
-    margin-top: var(--section-gap);
-    grid-template-columns: var(--grid-content);
-
-}
-
-.bolan__content {
-    grid-column: 1 / 8;
-}
-
-.bolan-content__info {
-    grid-column: 2 / 6;
-    display: flex;
-    margin-bottom: 2rem;
-}
-
-.bolan__arrow {
-    margin-left: 10rem;
-}
-
-.bolan-content__demands {
-    grid-column: 2 / 6;
-}
-
-.bolan-demands__text {
-    grid-column: 2 / 6;
-    margin-bottom: 3rem;
-}
-
-.bolan__column {
-    grid-column: 7 / 12;
-}
-
-.bolan-image {
-    margin-bottom: var(--section-gap);
-    grid-column: 8 / 11;
-    max-width: 80%;
-    box-shadow: 80px 30px #82B1FF;
-}
-
-.bolan__button {
-    align-items: center;
-    background-color: #448AFF;
-    border-radius: 50px 0px 50px 0px;
-    border-color: #448AFF;
-    &:hover {
-        cursor: pointer;
-        background-color: var(--color-light-blue);
-    }
-    margin-top: var(--section-gap);
-}
-
-.bolan-button__headline {
-    font-size: 14px;
-    color: var(--color-light);
-    margin-left: 1.5rem;
-    margin-right: 1.5rem;
-}
-
-/* Subpage - I behov av ett annat typ av lån? */
-.new-loan {
-    margin-top: var(--section-gap);
-    display: grid;
-    grid-template-columns: var(--grid-container);
-}
-
-.new-loan__inner {
-    grid-column: inner;
-}
-
-.new-loan__content {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    columns: 2;
-    margin-top: var(--section-gap);
-}
-
-.new-loan__info {
-    display: grid;
-    margin-bottom: 4rem;
-    margin-left: 10rem;
-}
-
-.new-loan__headline {
-    line-height: 2.5rem;
-}
-
-.new-loan__text {
-    line-height: 2.5rem;
-}
-
-.new-loan__image {
-    display: flex;
-    flex-direction: column;
-    max-width: 35%;
-}
-
-.new-loan__picture {
-    grid-column: 8 /12;
-    max-width: 100%;
-}
-
-.privateloan__arrows {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 3rem;
-}
-
-.new-loan__intro {
-    display: flex;
-    margin-top: 60px;
-    margin-left: 650px;
-    margin-bottom: 50px;
-    align-items: center;
-    background-color: var(--color-light-blue);
-    width: 733px;
-    padding-left: 10px;
-}
-
-/* Responsivitet 1530px */
-@media screen and (max-width: 1530px) {
-    /* Questions */
-    .questions__arrow {
-        margin-left: 30px;
+    &__intro {
+        display: flex;
+        grid-column: 6 / 11;
+        justify-content: space-evenly;
+        margin-top: var(--section-gap);
+        margin-bottom: var(--section-gap);
     }
 
-    .questions-image__bottom {
-        grid-column: 2 / 5;
-        max-width: 20%; 
-    }   
-
-    .questions-image__top {
-        grid-column: 4 / 7;
-        margin-bottom: 200px;
-        margin-left: -80px;
+    &__image {
+        display: grid;
+    }
+    
+    &-image__bottom {
+        grid-column: 3 / 5;
+        max-width: 80%;
+    }
+    
+    &-image__top {
+        display: flex;
+        grid-column: 4 / 6;
         box-shadow: 10px 10px 35px;
-        max-width: 20%;
+        max-width: 90%;   
+        margin-top: -30rem;     
     }
-
-    .questions__button {
+    
+    &__section {
+        grid-column: 6 / 11;
+    }
+    
+    &__button {
         display: flex;
         background-color: #448AFF;
         border-radius: 50px 0px 50px 0px;
         border-color: #448AFF;
-        width: 300px;
-        margin: 20px;
-        margin-left: 600px;
+        width: 400px;
+        margin: 40px;
         justify-content: center;
         align-items: center;
         &:hover {
@@ -792,34 +446,9 @@ img {
         }
     }
     
-    .questions__text {
+    &__text {
         color: var(--color-light);
-        font-size: 12px;
-    }
-    
-    .questions__intro {
-        display: flex;
-        margin-top: 60px;
-        margin-bottom: 60px;
-        align-items: center;
-        background-color: var(--color-light);
-        width: auto;
-        padding-left: 10px;
-    }
-
-    .questions__headline {
-        font-size: 24px;
-    }
-
-    .questions__section {
-        margin-top: -400px;
-    }
-    
-    .questions {
-        margin-top: 100px;
-        margin-bottom: 200px;
-        display: grid;
-        grid-template-columns: var(--grid-container);
+        font-weight: 300;
     }
 }
 
@@ -868,70 +497,22 @@ img {
     .how-to__box {
         margin: 0px;
     }
-    
-    /* Questions */
-    .questions__arrow {
-        margin-left: 30px;
-    }
 
-    .questions-image__bottom {
-        grid-column: 3 / 6;
-        max-width: 20%; 
-        margin-left: 60px;
-    }   
-
-    .questions-image__top {
-        grid-column: 4 / 7;
-        margin-bottom: 100px;
-        margin-left: -80px;
-        box-shadow: 10px 10px 35px;
-        max-width: 20%;
-    }
-
-    .questions__button {
-        display: flex;
-        background-color: #448AFF;
-        border-radius: 50px 0px 50px 0px;
-        border-color: #448AFF;
-        width: 300px;
-        margin: 20px;
-        margin-left: 500px;
-        justify-content: center;
-        align-items: center;
-        &:hover {
-            cursor: pointer;
-            background-color: var(--color-light-blue);
-        }
-    }
-    
-    .questions__text {
-        color: var(--color-light);
-        font-size: 12px;
-    }
-    
-    .questions__intro {
-        display: flex;
-        margin-top: 60px;
-        margin-bottom: 60px;
-        margin-left: 60px;
-        align-items: center;
-        background-color: var(--color-light);
-        padding-left: 10px;
-    }
-
-    .questions__headline {
-        font-size: 24px;
-    }
-
-    .questions__section {
-        margin-top: -400px;
-    }
-    
-    .questions {
-        margin-top: 100px;
-        margin-bottom: 200px;
+    .questions__image {
         display: grid;
-        grid-template-columns: var(--grid-container);
+    }
+    
+.questions-image__bottom {
+        grid-column: 3 / 6;
+        max-width: 80%;
+    }
+    
+.questions-image__top {
+        display: none;     
+    }
+    
+    .questions__section {
+
     }
 }
 
@@ -1017,7 +598,8 @@ img {
 
     .loan-pros__content {
         margin-top: 100px;
-        grid-column: 2 / 6;
+        grid-column: 8 / 12;
+        margin-top: -500px;
     }
 
     /* Calculated result */
@@ -1074,114 +656,10 @@ img {
         margin-top: 100px;
     }
 
-    /* Questions */
-    .questions__arrow {
-        margin-left: 30px;
-    }
-
-    .questions-image__bottom {
-        grid-column: 3 / 6;
-        max-width: 30%; 
-        margin-left: 80px;
-    }   
-
-    .questions-image__top {
-        grid-column: 4 / 7;
-        margin-bottom: 100px;
-        margin-left: -170px;
-        box-shadow: 10px 10px 35px;
-        max-width: 30%;
-    }
-
-    .questions__button {
-        display: flex;
-        background-color: #448AFF;
-        border-radius: 50px 0px 50px 0px;
-        border-color: #448AFF;
-        width: 300px;
-        margin: 20px;
-        margin-left: 500px;
-        justify-content: center;
-        align-items: center;
-        &:hover {
-            cursor: pointer;
-            background-color: var(--color-light-blue);
-        }
-    }
-    
-    .questions__text {
-        color: var(--color-light);
-        font-size: 12px;
-    }
-    
-    .questions__intro {
-        display: flex;
-        margin-top: 60px;
-        margin-bottom: 60px;
-        margin-left: 60px;
-        align-items: center;
-        background-color: var(--color-light);
-        padding-left: 10px;
-    }
-
-    .questions__headline {
-        font-size: 24px;
-    }
-
-    .questions__section {
-        margin-top: -400px;
-    }
-    
-    .questions {
-        margin-top: 100px;
-        margin-bottom: 200px;
-        display: grid;
-        grid-template-columns: var(--grid-container);
-    }
 }
 
 /* Responsivitet 980px */
 @media screen and (max-width: 980px) {
-    /* Subpage Hero section */
-    .sub-hero__content {
-        grid-column: 2 / 12;
-        margin-top: 20%;
-        text-align: center;
-    }
-
-    .sub-hero__title {
-        font-size: 22px;
-    }
-
-    .first-content__content {
-        margin-top: -250px;
-        grid-column: 8 / 13;
-        margin-bottom: -100px;
-    }
-
-    .security__content {
-        grid-column: 2 / 12;
-    }
-
-    /* Ränta */
-    .ranta__headline {
-        font-size: 18px;
-        background-color: var(--color-light);
-    }
-
-    .ranta-button__headline {
-        font-size: 14px;
-    }
-
-    .new-loan__intro {
-        display: flex;
-        margin-top: 60px;
-        margin-left: 60px;
-        margin-bottom: 50px;
-        align-items: center;
-        background-color: var(--color-light);
-        padding-left: 10px;
-    }
     /* Hero sektion */
     .hero__content {
         grid-column: 1 / 7;
@@ -1194,7 +672,6 @@ img {
         font-size: 22px;
     }
 
-    
     /* Formulär */
     .site-form__title {
         font-size: 22px;
@@ -1281,11 +758,6 @@ img {
         font-size: 22px;
     }
 
-    .loan-pros__content {
-        margin-top: 100px;
-        grid-column: 2 / 6;
-    }
-
     /* Calculated result */
     .result__content {
         display: none;
@@ -1296,18 +768,128 @@ img {
     }
 }
 
-/* Responsivitet 810px */
-@media screen and (max-width: 810px) {
-    /* Subpage content */
-    .first-content__content {
-        margin-top: -400px;
-        grid-column: 8 / 13;
-        margin-bottom: -100px;
+/* Responsivitet 950px */
+@media screen and (max-width: 950px) {
+
+    .hero {
+        min-height: calc(100vh + var(--section-gap-inner));
+        display: grid;
+        grid-template-columns: var(--grid-container);
+        background-image: url(/assets/images/travel.jpg);
+        background-size: cover;
     }
 
-    .first-content__headline {
-        font-size: 22px;
+    .hero__content {
+        grid-column: inner;
+        margin-top: 11rem;
+        text-align: center;
+        grid-column: 4 / 11;
+        margin-right: 4rem;
     }
+    /* Loan pros */
+    .loan-pros {
+        display: none;
+    }
+    
+    .site-form {
+        display: grid;
+        grid-template-columns: var(--grid-container);
+    }
+        
+    .site-form__inner {
+            grid-column: inner;
+            display: grid;
+            grid-template-columns: var(--grid-content);
+        }
+        
+    .site-form__content {
+            background-color: #F6F6F6;
+            grid-column: 1 / 13;
+            z-index: 999;
+            overflow-y: hidden;
+            margin-top: -30%;
+            box-shadow: 10px 10px 35px;
+            padding: 20px;
+        }
+        
+    .questions__content {
+            display: grid;
+        }
+        
+    .questions__intro {
+            display: flex;
+            grid-column: 6 / 11;
+            justify-content: space-evenly;
+            margin-top: var(--section-gap);
+            margin-bottom: var(--section-gap);
+        }
+        
+    .questions__image {
+            display: grid;
+        }
+        
+    .questions-image__bottom {
+            grid-column: 3 / 7;
+            max-width: 80%;
+        }
+        
+    .questions-image__top {
+            display: none;     
+        }
+        
+    .questions__section {
+            grid-column: 6 / 11;
+        }
+    
+        .form-section {
+            display: grid;
+            grid-template-columns: var(--grid-container);
+        
+            &__inner {
+                grid-column: inner;
+            }
+        }
+        
+        
+        .level {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            justify-content: space-between;
+            
+            &__headline {
+                font-size: 16px;
+            }
+        }
+}
+
+/* Responsivitet 840px */
+@media screen and (max-width: 840px) {
+    .questions-image__bottom {
+        display: none;
+    }
+
+    .questions__section {
+        
+    }
+    
+    .questions__button {
+        display: flex;
+        flex-direction: column;
+        margin: 0px 0px 2rem 0px;
+        padding: 0px
+    }
+    
+    .questions__text {
+        color: var(--color-light);
+        font-weight: 300;
+        margin: 0px;
+        padding: 0px;
+    }
+}
+
+/* Responsivitet 810px */
+@media screen and (max-width: 810px) {
     
     /* Partners */
     .partners {
@@ -1344,7 +926,6 @@ img {
         max-width: 100%;
     }
 
-
     /* Article */
     .content__title {
         font-size: 22px;
@@ -1360,6 +941,14 @@ img {
     }
 }
 
+/* Responsivitet 630px */
+@media screen and (max-width: 630px) {
+    .level {
+        display: flex;
+        flex-direction: column;
+        margin-right: 3rem;
+    }
+}
 
 /* Responsivitet 530px */
 @media screen and (max-width: 530px) {
@@ -1419,68 +1008,12 @@ img {
         margin-bottom: 30px;
     }
     
-    /* Questions */
-    .questions__arrow {
-        margin-left: 30px;
-    }
+}
 
-    .questions-image__bottom {
-        grid-column: 3 / 6;
-        max-width: 30%; 
-        margin-left: 80px;
-    }   
-
-    .questions-image__top {
-        grid-column: 4 / 7;
-        margin-bottom: 100px;
-        margin-left: -170px;
-        box-shadow: 10px 10px 35px;
-        max-width: 30%;
-    }
-
-    .questions__button {
-        display: flex;
-        background-color: #448AFF;
-        border-radius: 50px 0px 50px 0px;
-        border-color: #448AFF;
-        width: 250px;
-        margin: 20px;
-        margin-left: 450px;
-        justify-content: center;
-        align-items: center;
-        &:hover {
-            cursor: pointer;
-            background-color: var(--color-light-blue);
-        }
-    }
-    
-    .questions__text {
-        color: var(--color-light);
-        font-size: 12px;
-    }
-    
-    .questions__intro {
-        display: flex;
-        margin-top: 60px;
-        margin-bottom: 60px;
-        margin-left: 60px;
-        align-items: center;
-        background-color: var(--color-light);
-        padding-left: 10px;
-    }
-
-    .questions__headline {
-        font-size: 24px;
-    }
-
-    .questions__section {
-        margin-top: -400px;
-    }
-    
-    .questions {
-        margin-top: 100px;
-        margin-bottom: 200px;
-        display: grid;
-        grid-template-columns: var(--grid-container);
+/* Responsivitet 450px */
+@media screen and (max-width: 450px) {
+    .form-submit__button {
+        margin: 0px;
+        padding: 0px;
     }
 }
